@@ -1,19 +1,24 @@
-import '../tamagui.css';
+import '../../tamagui.css';
 
+// React Native
 import {
   DarkTheme,
   DefaultTheme,
   ThemeProvider,
 } from '@react-navigation/native';
-import { SplashScreen, Stack } from 'expo-router';
 import { useColorScheme } from 'react-native';
-import { TamaguiProvider } from 'tamagui';
 
-import { config } from '../tamagui.config';
+// Expo
+import { SplashScreen, Stack } from 'expo-router';
 import { useFonts } from 'expo-font';
-import { useEffect } from 'react';
-
 export { ErrorBoundary } from 'expo-router';
+
+// Styles
+import { TamaguiProvider } from 'tamagui';
+import { config } from '../../tamagui.config';
+
+// React
+import { useEffect } from 'react';
 
 export const unstable_settings = {
   initialRouteName: 'index',
