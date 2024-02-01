@@ -38,18 +38,18 @@ export default function Page() {
       resizeMode='cover'
       style={{ flex: 1 }}
     >
-      <YStack f={1} justifyContent='space-between' marginTop='$13'>
-        <View alignItems='center' gap='$4.5'>
+      <YStack f={1} justifyContent='space-between' marginTop='$large'>
+        <View alignItems='center' gap='$48'>
           <Image source={BRAND_IMAGE} />
           <Image source={PARTNERSHIPS} />
         </View>
 
-        <YStack gap='$2.5'>
-          <View marginHorizontal={'$4'}>
-            <Text color={'$color'} fontSize={24} fontWeight={'700'}>
+        <YStack gap='$32'>
+          <View marginHorizontal={'$24'}>
+            <Text color={'$white'} fontSize={24} fontWeight={'700'}>
               Bem-vindo de volta!
             </Text>
-            <Paragraph fontWeight={'400'}>
+            <Paragraph fontWeight={'400'} color={'$slate'}>
               Preparado para mais uma jornada?
             </Paragraph>
           </View>
