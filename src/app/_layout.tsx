@@ -9,7 +9,6 @@ import { useColorScheme } from 'react-native';
 // Expo
 import { SplashScreen, Stack } from 'expo-router';
 import { useFonts } from 'expo-font';
-export { ErrorBoundary } from 'expo-router';
 
 // Styles
 import { TamaguiProvider, Text } from 'tamagui';
