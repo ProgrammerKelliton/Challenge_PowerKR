@@ -5,11 +5,12 @@ import { createMedia } from 'tamagui';
 const interFont = createFont({
   family: 'Inter',
   size: {
-    1: 12,
-    2: 14,
-    3: 16,
-    4: 20,
-    5: 30,
+    10: 10,
+    12: 12,
+    14: 14,
+    16: 16,
+    20: 20,
+    30: 30,
   },
   lineHeight: {
     1: 18,
@@ -42,10 +43,7 @@ export const tokens = createTokens({
     64: 64,
   },
   space: {
-    small: 10,
-    medium: 20,
-    true: 20,
-    large: 160,
+    4: 4,
     9: 9,
     12: 12,
     15: 15,
@@ -64,6 +62,7 @@ export const tokens = createTokens({
     'gray-200': '#9AA4B2',
     'gray-400': '#4B5565',
     brand: '#F7B519',
+    'black-2': '#121926',
   },
 });
 

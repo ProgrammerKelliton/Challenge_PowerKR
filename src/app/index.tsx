@@ -17,8 +17,9 @@ import {
   BRAND_IMAGE,
   PARTNERSHIPS,
 } from '../../constants/images';
+import { Redirect } from 'expo-router';
 
-export default function Page() {
+export default function Login() {
   const [loaded] = useFonts({
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
     InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
@@ -32,31 +33,34 @@ export default function Page() {
     return null;
   }
 
-  return (
-    <ImageBackground
-      source={BACKGROUND_IMAGE}
-      resizeMode='cover'
-      style={{ flex: 1 }}
-    >
-      <YStack f={1} justifyContent='space-between' marginTop='$large'>
-        <View alignItems='center' gap='$48'>
-          <Image source={BRAND_IMAGE} />
-          <Image source={PARTNERSHIPS} />
-        </View>
+  // Usado só para desenvolvimento
+  return <Redirect href='/home/'></Redirect>;
 
-        <YStack gap='$32'>
-          <View marginHorizontal={'$24'}>
-            <Text color={'$white'} fontSize={24} fontWeight={'700'}>
-              Bem-vindo de volta!
-            </Text>
-            <Paragraph fontWeight={'400'} color={'$slate'}>
-              Preparado para mais uma jornada?
-            </Paragraph>
-          </View>
+  // return (
+  //   <ImageBackground
+  //     source={BACKGROUND_IMAGE}
+  //     resizeMode='cover'
+  //     style={{ flex: 1 }}
+  //   >
+  //     <YStack f={1} justifyContent='space-between' marginTop='$large'>
+  //       <View alignItems='center' gap='$48'>
+  //         <Image source={BRAND_IMAGE} />
+  //         <Image source={PARTNERSHIPS} />
+  //       </View>
 
-          <FormLogin />
-        </YStack>
-      </YStack>
-    </ImageBackground>
-  );
+  //       <YStack gap='$32'>
+  //         <View marginHorizontal={'$24'}>
+  //           <Text color={'$white'} fontSize={24} fontWeight={'700'}>
+  //             Bem-vindo de volta!
+  //           </Text>
+  //           <Paragraph fontWeight={'400'} color={'$slate'}>
+  //             Preparado para mais uma jornada?
+  //           </Paragraph>
+  //         </View>
+
+  //         <FormLogin />
+  //       </YStack>
+  //     </YStack>
+  //   </ImageBackground>
+  // );
 }
