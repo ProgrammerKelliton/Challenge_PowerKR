@@ -9,6 +9,7 @@ import { ImageBackground } from 'react-native';
 
 // Components
 import { Image, View, YStack, Text, Paragraph } from 'tamagui';
+import FormLogin from '../components/form/form';
 
 // Constants
 import {
@@ -35,16 +36,16 @@ export default function Page() {
     <ImageBackground
       source={BACKGROUND_IMAGE}
       resizeMode='cover'
-      style={{ flex: 1, justifyContent: 'center' }}
+      style={{ flex: 1 }}
     >
-      <YStack f={1} justifyContent='space-around'>
-        <View alignItems='center' gap='$8'>
+      <YStack f={1} justifyContent='space-between' marginTop='$13'>
+        <View alignItems='center' gap='$4.5'>
           <Image source={BRAND_IMAGE} />
           <Image source={PARTNERSHIPS} />
         </View>
 
-        <View marginHorizontal={'$4'}>
-          <View>
+        <YStack gap='$2.5'>
+          <View marginHorizontal={'$4'}>
             <Text color={'$color'} fontSize={24} fontWeight={'700'}>
               Bem-vindo de volta!
             </Text>
@@ -52,7 +53,9 @@ export default function Page() {
               Preparado para mais uma jornada?
             </Paragraph>
           </View>
-        </View>
+
+          <FormLogin />
+        </YStack>
       </YStack>
     </ImageBackground>
   );
