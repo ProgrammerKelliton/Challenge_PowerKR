@@ -3,6 +3,7 @@ import { YStack } from 'tamagui';
 import Switch from '../../../../components/switch/switch';
 import Greetings from '../../../../components/greetings/greetings';
 import ProfileCard from '../../../../components/profile_card/profile_card';
+import Appointments from '../../../../components/appointments/appointments';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Greetings />
       <Switch />
       <ProfileCard />
+      <Appointments />
     </YStack>
   );
 }

@@ -1,3 +1,4 @@
+// Types
 import { ImageSourcePropType } from 'react-native';
 
 type ImageSource = ImageSourcePropType | undefined;
@@ -14,6 +15,12 @@ const USER_ICON: ImageSource = require('../../assets/icons/userCircle.png');
 
 const CHART_PIE: ImageSource = require('../../assets/icons/chartPieSlice.png');
 
+const CHAT_YELLOW_ICON: ImageSource = require('../../assets/icons/chatTeardropDotsYellow.png');
+
+const CALENDAR_ICON: ImageSource = require('../../assets/icons/calendarBlank.png');
+
+const CARET_UP_ICON: ImageSource = require('../../assets/icons/caretUp.png');
+
 export {
   BELL_ICON,
   HOUSE_ICON,
@@ -21,4 +28,7 @@ export {
   CHAT_ICON,
   USER_ICON,
   CHART_PIE,
+  CHAT_YELLOW_ICON,
+  CALENDAR_ICON,
+  CARET_UP_ICON,
 };

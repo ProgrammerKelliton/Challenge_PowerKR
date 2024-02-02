@@ -1,20 +1,13 @@
 // Components
 import { Image, Paragraph, Text, View } from 'tamagui';
+import Container from '../container/container';
 
 // Constants
 import { PROFILE_CARD_IMAGE } from '../../../constants/images';
 
 export default function ProfileCard() {
   return (
-    <View
-      flexDirection='row'
-      gap='$15'
-      alignSelf='stretch'
-      marginHorizontal='$32'
-      bg={'$gray-950'}
-      padding='$15'
-      borderRadius='$24'
-    >
+    <Container props={{ marginHorizontal: '$32' }}>
       <Image source={PROFILE_CARD_IMAGE} />
 
       <View justifyContent='center'>
@@ -25,6 +18,6 @@ export default function ProfileCard() {
           Empresa
         </Paragraph>
       </View>
-    </View>
+    </Container>
   );
 }

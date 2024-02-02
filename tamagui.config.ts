@@ -39,10 +39,9 @@ const interFont = createFont({
 export const tokens = createTokens({
   size: {
     20: 20,
-    small: 64,
-    true: 30,
-    large: 160,
     64: 64,
+    true: 30,
+    240: 240,
   },
   space: {
     1: 1,
@@ -67,6 +66,7 @@ export const tokens = createTokens({
     'gray-400': '#4B5565',
     brand: '#F7B519',
     'black-2': '#121926',
+    green: '#1D8935',
   },
 });
 

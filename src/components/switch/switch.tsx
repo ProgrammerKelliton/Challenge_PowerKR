@@ -20,13 +20,13 @@ export default function Switch() {
       <SwitchItem
         name='Pessoal'
         isSelect={isSelectedPersonal}
-        onPress={() => setIsSelectedPersonal((prev) => !prev)}
+        onPress={() => setIsSelectedPersonal(true)}
         pathIcon={USER_ICON}
       />
       <SwitchItem
         name='Geral'
         isSelect={!isSelectedPersonal}
-        onPress={() => setIsSelectedPersonal((prev) => !prev)}
+        onPress={() => setIsSelectedPersonal(false)}
         pathIcon={CHART_PIE}
       />
     </XStack>

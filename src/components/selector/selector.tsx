@@ -1,4 +1,7 @@
+// Components
 import { Select } from 'tamagui';
+
+// Icons
 import { ChevronDown } from '@tamagui/lucide-icons';
 
 export default function Selector() {

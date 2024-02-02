@@ -1,3 +1,4 @@
+// Types
 import { ImageSourcePropType } from 'react-native';
 
 const BACKGROUND_IMAGE:
