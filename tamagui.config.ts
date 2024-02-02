@@ -53,6 +53,7 @@ export const tokens = createTokens({
     32: 32,
     48: 48,
     72: 72,
+    88: 88,
   },
   radius: { 12: 12, 24: 24, full: 500 },
   zIndex: { 0: 0, 1: 100, 2: 200 },
