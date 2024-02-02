@@ -11,7 +11,7 @@ export default function SwitchItem({
   onPress,
 }: SwitchItemProps) {
   const borderColor = isSelect ? '$gray-400' : 'transparent';
-  const backgroundColor = isSelect ? '$gray-950' : '';
+  const backgroundColor = isSelect ? '$gray-950' : 'transparent';
 
   return (
     <XStack
@@ -22,6 +22,7 @@ export default function SwitchItem({
       paddingVertical='$9'
       borderWidth='$1'
       onPress={onPress}
+      gap='$9'
     >
       <Image source={pathIcon} />
       <Text>{name}</Text>

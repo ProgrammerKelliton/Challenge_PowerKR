@@ -5,6 +5,9 @@ import { useState } from 'react';
 import { XStack } from 'tamagui';
 import SwitchItem from '../switch_item/switch_item';
 
+// Icons
+import { CHART_PIE, USER_ICON } from '../../../constants/icons';
+
 export default function Switch() {
   const [isSelectedPersonal, setIsSelectedPersonal] = useState(true);
 
@@ -18,11 +21,13 @@ export default function Switch() {
         name='Pessoal'
         isSelect={isSelectedPersonal}
         onPress={() => setIsSelectedPersonal((prev) => !prev)}
+        pathIcon={USER_ICON}
       />
       <SwitchItem
         name='Geral'
         isSelect={!isSelectedPersonal}
         onPress={() => setIsSelectedPersonal((prev) => !prev)}
+        pathIcon={CHART_PIE}
       />
     </XStack>
   );

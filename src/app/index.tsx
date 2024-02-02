@@ -15,7 +15,7 @@ import FormLogin from '../components/form/form';
 import {
   BACKGROUND_IMAGE,
   BRAND_IMAGE,
-  PARTNERSHIPS,
+  PARTNERSHIPS_IMAGE,
 } from '../../constants/images';
 import { Redirect } from 'expo-router';
 

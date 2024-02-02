@@ -12,4 +12,13 @@ const CHAT_ICON: ImageSource = require('../../assets/icons/chatTeardropDots.png'
 
 const USER_ICON: ImageSource = require('../../assets/icons/userCircle.png');
 
-export { BELL_ICON, HOUSE_ICON, ALIGHTOP_ICON, CHAT_ICON, USER_ICON };
+const CHART_PIE: ImageSource = require('../../assets/icons/chartPieSlice.png');
+
+export {
+  BELL_ICON,
+  HOUSE_ICON,
+  ALIGHTOP_ICON,
+  CHAT_ICON,
+  USER_ICON,
+  CHART_PIE,
+};

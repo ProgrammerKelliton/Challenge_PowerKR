@@ -12,4 +12,13 @@ const PARTNERSHIPS_IMAGE:
   | ImageSourcePropType
   | undefined = require('../../assets/images/partnerships.png');
 
-export { BACKGROUND_IMAGE, BRAND_IMAGE, PARTNERSHIPS_IMAGE as PARTNERSHIPS };
+const PROFILE_CARD_IMAGE:
+  | ImageSourcePropType
+  | undefined = require('../../assets/images/profile_card_image.png');
+
+export {
+  BACKGROUND_IMAGE,
+  BRAND_IMAGE,
+  PARTNERSHIPS_IMAGE,
+  PROFILE_CARD_IMAGE,
+};
