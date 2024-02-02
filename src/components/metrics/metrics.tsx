@@ -16,13 +16,18 @@ export default function Metrics() {
 
       <YStack gap='$15'>
         <XStack justifyContent='space-between'>
-          <CircularProgress />
-          <CircularProgress />
+          <CircularProgress text='Assumidos' />
+          <CircularProgress text='Realizados' />
         </XStack>
 
         <XStack justifyContent='space-between'>
-          <CircularProgress />
-          <CircularProgress />
+          <CircularProgress text='Pontos' />
+          <CircularProgress text='Pontuação Média' />
+        </XStack>
+
+        <XStack justifyContent='space-between'>
+          <CircularProgress text='Execução' />
+          <CircularProgress text='Desempenho Médio' />
         </XStack>
       </YStack>
     </YStack>

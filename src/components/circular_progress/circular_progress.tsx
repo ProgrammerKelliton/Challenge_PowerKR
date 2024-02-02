@@ -3,7 +3,10 @@
 import { Circle, Svg, Text } from 'react-native-svg';
 import { View } from 'tamagui';
 
-export default function CircularProgress() {
+// Types
+import CircularProgressProps from '../../types/components/circular_progress';
+
+export default function CircularProgress({ text }: CircularProgressProps) {
   const SVG_SIZE = 120;
   const RADIUS = 8 * 2 * Math.PI;
   const POSITION = { x: SVG_SIZE / 2, y: SVG_SIZE / 2 };
@@ -53,7 +56,7 @@ export default function CircularProgress() {
           fill={'#9AA4B2'}
           fontSize={'14'}
         >
-          Assumidos
+          {text}
         </Text>
       </Svg>
     </View>

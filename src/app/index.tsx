@@ -34,7 +34,7 @@ export default function Login() {
   }
 
   // Usado só para desenvolvimento
-  return <Redirect href='/home/'></Redirect>;
+  return <Redirect href='/profile/'></Redirect>;
 
   // return (
   //   <ImageBackground

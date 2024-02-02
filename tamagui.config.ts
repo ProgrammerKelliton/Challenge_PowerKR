@@ -39,6 +39,7 @@ const interFont = createFont({
 export const tokens = createTokens({
   size: {
     20: 20,
+    54: 54,
     64: 64,
     true: 30,
     240: 240,
