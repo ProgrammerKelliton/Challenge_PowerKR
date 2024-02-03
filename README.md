@@ -2,7 +2,7 @@
 
 Nome: Kelliton Santana
 
-Whatsapp:
+Whatsapp: 77991017006
 
 ### O que fiz:
 
@@ -17,8 +17,9 @@ Whatsapp:
 
 - Usar Atomic Design
 - Testes unitários ou e2e
+- Adicionar mais validações de segurança
+- Melhorar o tratamento de erros
 
 ### Notas
 
-- Deixei alguns comentários no código explicando as minhas escolhas em alguns fragmentos
-- É possível fazer mais validações de seguranças em alguns campos
+- Deixei alguns comentários no código explicando algumas das minhas escolhas em alguns fragmentos

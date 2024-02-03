@@ -1,4 +1,5 @@
 // Types
+
 import { LoginActionData } from '../../types/others/login.types';
 
 // Utils
@@ -14,4 +15,11 @@ export function LoginAction({ email, password }: LoginActionData) {
 
   const emailResult = emailValidator.parse();
   const passwordResult = passwordValidor.parse();
+
+  // Requisição aqui após verificação dos results: 'emailResult' and 'passwordResult'
+
+  return {
+    emailResult,
+    passwordResult,
+  };
 }

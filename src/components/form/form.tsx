@@ -14,14 +14,35 @@ import { Eye, EyeOff } from '@tamagui/lucide-icons';
 // React
 import { useState } from 'react';
 
+// Utils
+import { useToastController } from '@tamagui/toast';
+
 export default function FormLogin() {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const toast = useToastController();
+
+  function handlerLoginAction() {
+    const { emailResult, passwordResult } = LoginAction({ email, password });
+
+    if (!emailResult.valid) {
+      toast.show(`Email invalido - ${emailResult.error}`, {
+        message: emailResult.error,
+        native: true,
+      });
+    } else if (!passwordResult.valid) {
+      toast.show(`Senha invalida - ${passwordResult.error}`, {
+        message: emailResult.error,
+        native: true,
+      });
+    }
+  }
+
   return (
     <Form
-      onSubmit={() => LoginAction({ email, password })}
+      onSubmit={handlerLoginAction}
       bg={'$black'}
       padding='$24'
       borderTopRightRadius={'$24'}
@@ -41,6 +62,9 @@ export default function FormLogin() {
             id='password'
             label='Senha'
             onChangeText={setPassword}
+            props={{
+              secureTextEntry: showPassword,
+            }}
           >
             <Button
               icon={showPassword ? Eye : EyeOff}

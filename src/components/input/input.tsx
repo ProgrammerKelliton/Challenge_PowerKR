@@ -10,6 +10,7 @@ export default function Input({
   label,
   children,
   onChangeText,
+  props,
 }: InputProps) {
   return (
     <>
@@ -32,6 +33,7 @@ export default function Input({
           borderColor={'transparent'}
           f={1}
           onChangeText={onChangeText}
+          {...props}
         />
         {children}
       </View>

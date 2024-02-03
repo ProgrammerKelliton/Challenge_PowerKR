@@ -6,18 +6,19 @@ import { HaveCharacterInStateProps } from '../../types/utils/password_validor.ty
 
 export default class PasswordValidator extends BaseValidator {
   isValidPassword() {
-    this.haveUpperCaseWords();
-    this.haveLowerCaseWords();
-    this.haveNumber();
+    this.haveUpperCaseWords()?.haveLowerCaseWords()?.haveNumber();
 
     return this;
   }
+  // Obs: Aqui era possível lançar um error também só mudaria um pouco a estrutura
   private haveUpperCaseWords() {
     const foundUpperCase = this.haveCharacterInState({ state: 'UPPER_CASE' });
 
     if (!foundUpperCase) {
       this.error = 'Deve conter letras maiúsculas';
       this.isValid = false;
+
+      return;
     }
 
     return this;
@@ -28,6 +29,8 @@ export default class PasswordValidator extends BaseValidator {
     if (!foundLowerCase) {
       this.error = 'Deve conter letras minúsculas';
       this.isValid = false;
+
+      return;
     }
 
     return this;
@@ -48,6 +51,8 @@ export default class PasswordValidator extends BaseValidator {
     if (!found) {
       this.error = 'Deve conter números';
       this.isValid = false;
+
+      return;
     }
 
     return this;
