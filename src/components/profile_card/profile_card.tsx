@@ -8,7 +8,7 @@ import { PROFILE_IMAGE } from '../../../constants/images';
 export default function ProfileCard() {
   return (
     <Container props={{ marginHorizontal: '$32' }}>
-      <Image source={{ uri: PROFILE_IMAGE }} />
+      <Image source={PROFILE_IMAGE} />
 
       <View justifyContent='center'>
         <Text fontWeight={'500'} fontSize={'$16'}>

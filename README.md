@@ -9,7 +9,6 @@ Whatsapp: 77991017006
 [ x ] Criação da tela "login"<br/>
 [ x ] Criação da tela "Home"<br/>
 [ x ] Criação da tela "Perfil do usuário"<br/>
-[ ] Implementação mais fiel possível do mockup<br/>
 [ x ] Estilização com Tamagui<br/>
 [ x ] Validação de campos antes da requisição
 
@@ -19,6 +18,7 @@ Whatsapp: 77991017006
 - Testes unitários ou e2e
 - Adicionar mais validações de segurança
 - Melhorar o tratamento de erros
+- Adicionar animações
 
 ### Notas
 

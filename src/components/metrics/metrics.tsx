@@ -9,27 +9,22 @@ export default function Metrics() {
       marginHorizontal='$32'
       alignContent='center'
       gap='$15'
+      paddingBottom='$88'
     >
       <Text color='$gray-200' fontSize='$14' fontWeight='500'>
         Métricas
       </Text>
 
-      <YStack gap='$15'>
-        <XStack justifyContent='space-between'>
-          <CircularProgress text='Assumidos' />
-          <CircularProgress text='Realizados' />
-        </XStack>
+      <XStack flexWrap='wrap' gap='$15'>
+        <CircularProgress text='Assumidos' />
+        <CircularProgress text='Realizados' />
 
-        <XStack justifyContent='space-between'>
-          <CircularProgress text='Pontos' />
-          <CircularProgress text='Pontuação Média' />
-        </XStack>
+        <CircularProgress text='Assumidos' />
+        <CircularProgress text='Realizados' />
 
-        <XStack justifyContent='space-between'>
-          <CircularProgress text='Execução' />
-          <CircularProgress text='Desempenho Médio' />
-        </XStack>
-      </YStack>
+        <CircularProgress text='Assumidos' />
+        <CircularProgress text='Realizados' />
+      </XStack>
     </YStack>
   );
 }

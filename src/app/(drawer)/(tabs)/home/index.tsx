@@ -11,7 +11,7 @@ export default function Home() {
     <ScrollView
       bg={'$black-2'}
       f={1}
-      marginTop='$88'
+      paddingTop='$88'
       contentContainerStyle={{
         justifyContent: 'center',
         alignItems: 'center',

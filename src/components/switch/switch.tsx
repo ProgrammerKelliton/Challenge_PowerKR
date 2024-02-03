@@ -12,11 +12,7 @@ export default function Switch() {
   const [isSelectedPersonal, setIsSelectedPersonal] = useState(true);
 
   return (
-    <XStack
-      justifyContent='space-between'
-      alignSelf='stretch'
-      marginHorizontal='$32'
-    >
+    <XStack gap='$15' alignSelf='stretch' marginHorizontal='$32'>
       <SwitchItem
         name='Pessoal'
         isSelect={isSelectedPersonal}

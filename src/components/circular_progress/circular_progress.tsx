@@ -5,14 +5,24 @@ import { View } from 'tamagui';
 
 // Types
 import CircularProgressProps from '../../types/components/circular_progress';
+import { useWindowDimensions } from 'react-native';
 
 export default function CircularProgress({ text }: CircularProgressProps) {
   const SVG_SIZE = 120;
   const RADIUS = 8 * 2 * Math.PI;
   const POSITION = { x: SVG_SIZE / 2, y: SVG_SIZE / 2 };
+  const Size = 165;
 
   return (
-    <View bg={'$gray-950'} padding='$24' borderRadius='$24'>
+    <View
+      bg={'$gray-950'}
+      padding='$24'
+      borderRadius='$24'
+      justifyContent='center'
+      alignItems='center'
+      height={Size}
+      width={Size}
+    >
       <Svg width={SVG_SIZE} height={SVG_SIZE}>
         <Circle
           cx={POSITION.x}

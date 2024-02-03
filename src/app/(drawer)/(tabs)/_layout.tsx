@@ -7,9 +7,7 @@ import Tab from '../../../components/tab/tab';
 export default function AppLayout() {
   return (
     <Tabs
-      tabBar={(props) => {
-        return <Tab />;
-      }}
+      tabBar={() => <Tab />}
       screenOptions={{
         headerShown: false,
       }}

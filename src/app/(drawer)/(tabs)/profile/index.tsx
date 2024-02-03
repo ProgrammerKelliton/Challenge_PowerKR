@@ -1,14 +1,14 @@
 // Components
 import { Button, Image, Text, View, YStack } from 'tamagui';
 import { SettingOption } from '../../../../components/setting_option';
-import Container from '../../../../components/container/container';
 
 // Constants
 import { PROFILE_IMAGE } from '../../../../../constants/images';
 
-export default function Profile() {
-  const IMAGE_SIZE = 170;
+// Icons
+import { HelpCircle, Power } from '@tamagui/lucide-icons';
 
+export default function Profile() {
   return (
     <YStack
       bg={'$black-2'}
@@ -16,11 +16,10 @@ export default function Profile() {
       justifyContent='center'
       alignItems='center'
       gap='$32'
+      paddingTop='$88'
     >
       <View gap='$24'>
-        <Image
-          source={{ uri: PROFILE_IMAGE, width: IMAGE_SIZE, height: IMAGE_SIZE }}
-        />
+        <Image source={PROFILE_IMAGE} w={170} height={170} />
 
         <View gap='$9'>
           <Text textAlign='center' fontSize={'$20'} fontWeight={'500'}>
@@ -55,9 +54,25 @@ export default function Profile() {
         </SettingOption.Root>
       </View>
 
-      <View>
-        <Button>Ajuda</Button>
-        <Button>Sair</Button>
+      <View alignSelf='stretch' marginHorizontal='$24' gap='$15'>
+        <Button
+          bg={'$gray-950'}
+          borderColor={'$gray-400'}
+          borderRadius={'$24'}
+          height={'$40'}
+        >
+          <HelpCircle size={'$20'} />
+          <Text>Ajuda</Text>
+        </Button>
+        <Button
+          bg={'$gray-950'}
+          borderColor={'$gray-400'}
+          borderRadius={'$24'}
+          height={'$40'}
+        >
+          <Power size={'$20'} />
+          <Text>Sair</Text>
+        </Button>
       </View>
     </YStack>
   );

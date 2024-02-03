@@ -3,7 +3,7 @@ import { Button, Form, Text, YStack } from 'tamagui';
 import Input from '../input/input';
 
 // Expo
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 
 // Logic
 import { LoginAction } from './form_logic';
@@ -23,6 +23,7 @@ export default function FormLogin() {
   const [password, setPassword] = useState('');
 
   const toast = useToastController();
+  const router = useRouter();
 
   function handlerLoginAction() {
     const { emailResult, passwordResult } = LoginAction({ email, password });
@@ -37,6 +38,8 @@ export default function FormLogin() {
         message: emailResult.error,
         native: true,
       });
+    } else {
+      router.replace('/home/');
     }
   }
 
