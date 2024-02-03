@@ -1,25 +1,26 @@
-import '../tamagui.css';
-
+// React Native
 import {
   DarkTheme,
   DefaultTheme,
   ThemeProvider,
 } from '@react-navigation/native';
-import { SplashScreen, Stack } from 'expo-router';
 import { useColorScheme } from 'react-native';
-import { TamaguiProvider } from 'tamagui';
 
-import { config } from '../tamagui.config';
+// Expo
+import { SplashScreen, Stack } from 'expo-router';
 import { useFonts } from 'expo-font';
+
+// Styles
+import { TamaguiProvider, Text } from 'tamagui';
+import { config } from '../../tamagui.config';
+import '../../tamagui.css';
+
+// React
 import { useEffect } from 'react';
 
-export { ErrorBoundary } from 'expo-router';
-
-export const unstable_settings = {
-  initialRouteName: 'index',
-};
-
 SplashScreen.preventAutoHideAsync();
+
+const INITIAL_ROUTE_NAME = '(drawer)';
 
 export default function RootLayout() {
   const [interLoaded, interError] = useFonts({
@@ -46,8 +47,17 @@ function RootLayoutNav() {
   return (
     <TamaguiProvider config={config} defaultTheme={colorScheme as any}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
+        <Stack
+          initialRouteName={INITIAL_ROUTE_NAME}
+          screenOptions={{ headerShown: false }}
+        >
           <Stack.Screen name='index' options={{ headerShown: false }} />
+          <Stack.Screen
+            name='(drawer)'
+            options={{
+              headerShown: false,
+            }}
+          />
         </Stack>
       </ThemeProvider>
     </TamaguiProvider>
