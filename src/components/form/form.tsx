@@ -1,13 +1,27 @@
 // Components
-import { Button, Form, Input, Label, Text, View, YStack } from 'tamagui';
+import { Button, Form, Text, YStack } from 'tamagui';
+import Input from '../input/input';
 
 // Expo
 import { Link } from 'expo-router';
 
+// Logic
+import { LoginAction } from './form_logic';
+
+// Icon
+import { Eye, EyeOff } from '@tamagui/lucide-icons';
+
+// React
+import { useState } from 'react';
+
 export default function FormLogin() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <Form
-      onSubmit={() => {}}
+      onSubmit={() => LoginAction({ email, password })}
       bg={'$black'}
       padding='$24'
       borderTopRightRadius={'$24'}
@@ -15,38 +29,30 @@ export default function FormLogin() {
     >
       <YStack gap='$24'>
         <YStack gap='$15'>
-          <View>
-            <Label htmlFor='email'>Informações da conta</Label>
-            <Input
-              id='email'
-              defaultValue='Insira seu e-mail'
-              bg={'$gray-900'}
-              color={'$gray-200'}
-              borderRadius={'$12'}
-              height={'$64'}
-              borderColor={'$gray-400'}
-            />
-          </View>
+          <Input
+            defaultValue='Insira seu e-mail'
+            id='email'
+            label='Informações da conta'
+            onChangeText={setEmail}
+          />
 
-          <View>
-            <Label htmlFor='password'>Senha</Label>
-            <Input
-              id='password'
-              defaultValue='Senha'
-              bg={'$gray-900'}
-              color={'$gray-200'}
-              padding='$12'
-              borderRadius={'$12'}
-              height={'$64'}
-              borderColor={'$gray-400'}
+          <Input
+            defaultValue='Senha'
+            id='password'
+            label='Senha'
+            onChangeText={setPassword}
+          >
+            <Button
+              icon={showPassword ? Eye : EyeOff}
+              size={'$20'}
+              marginRight='$12'
+              onPress={() => setShowPassword((prev) => !prev)}
             />
-          </View>
+          </Input>
         </YStack>
 
-        <Link href='/forgot_password' asChild>
-          <Text color='$brand' textAlign='right'>
-            Esqueceu a senha?
-          </Text>
+        <Link href='/forgot_password'>
+          <Text color='$brand'>Esqueceu a senha?</Text>
         </Link>
 
         <Form.Trigger asChild>

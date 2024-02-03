@@ -25,6 +25,7 @@ export default function CircularProgress({ text }: CircularProgressProps) {
           strokeLinecap='round'
           transform={`rotate(-235, ${SVG_SIZE / 2}, ${SVG_SIZE / 2})`}
         />
+
         <Circle
           cx={POSITION.x}
           cy={POSITION.y}

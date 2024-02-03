@@ -1,5 +1,5 @@
 // Components
-import { ScrollView, Text, XStack, YStack } from 'tamagui';
+import { Text, XStack, YStack } from 'tamagui';
 import CircularProgress from '../circular_progress/circular_progress';
 
 export default function Metrics() {

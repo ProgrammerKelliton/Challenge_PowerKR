@@ -1,6 +1,10 @@
 // Components
-import { Text } from 'tamagui';
+import { Text, XStack } from 'tamagui';
 
 export default function ForgotPassword() {
-  return <Text>Essa é a rota "Esqueceu sua senha"</Text>;
+  return (
+    <XStack alignItems='center' justifyContent='center' f={1}>
+      <Text>Esqueci minha senha</Text>
+    </XStack>
+  );
 }

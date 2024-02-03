@@ -4,6 +4,7 @@ import { Select } from 'tamagui';
 // Icons
 import { ChevronDown } from '@tamagui/lucide-icons';
 
+// todo
 export default function Selector() {
   return (
     <Select defaultValue=''>

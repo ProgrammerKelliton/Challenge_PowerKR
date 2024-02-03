@@ -1,7 +1,7 @@
 // Components
 import { Text, YStack } from 'tamagui';
-import AppointmentsCard from '../appointments_card/appointments_card';
 import { FlatList } from 'react-native';
+import AppointmentsCard from '../appointments_card/appointments_card';
 
 // Content
 import { APPOINTSMENT_CONTENT } from '../../content/appointsments.content';
